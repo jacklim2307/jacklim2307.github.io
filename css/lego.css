@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #221811;
+    background-image: url('../img/Lego1.jpg');
+    text-align: center;
+}
+
+header {
+    background-color: #094bff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+nav {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5em;
+    float: left;
+    width: 200px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+footer {
+    background-color: #4E5180;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #00ccff;
+}
+
+#wrapper {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #231814;
+    min-width: 900px;
+    max-width: 1280px;
+    box-shadow: 3px 3px #888888;
+}
+
+main {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2em;
+    padding-top: 0;
+    margin-left: 200px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+ha {
+    color: #FFFF00;
+    font-size: 2cm;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+main h3,
+main p,
+main b {
+    padding-left: 3em;
+    padding-right: 2em;
+}
+
+div a {
+    text-decoration: none;
+}
+
+#RealMadridStadium {
+    background-image: url("../img/RealMadridStadium.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+}
+
+#RealMadridStadium1 {
+    background-image: url("../img/RealMadridStadium1.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+    background-color: #FFFFFF;
+}
+
+#Starwars {
+    background-image: url("../img/Starwars.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+}
+
+#Starwars1 {
+    background-image: url("../img/Starwars1.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+}
+
+#Starwars2-1 {
+    background-image: url("../img/Starwars2-1.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+}
+
+#Starwars3-1 {
+    background-image: url("../img/Starwars3-1.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+    background-color: #FFFFFF;
+}
+
+#Starwars4-1 {
+    background-image: url("../img/Starwars4-1.jpg");
+    background-size: 100% 100%;
+    height: 800px;
+    background-color: #FFFFFF;
+}
+
+#Starwars5-1 {
+    background-image: url("../img/Starwars5-1.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+}
+
+#Starwars6-1 {
+    background-image: url("../img/Starwars6-1.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+}
+
+#Starwars7-1 {
+    background-image: url("../img/Starwars7-1.jpg");
+    background-size: 100% 100%;
+    height: 700px;
+    background-color: #FFFFFF;
+}
+
+#Starwars8-1 {
+    background-image: url("../img/Starwars8-1.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+    background-color: #FFFFFF;
+}
+
+#Starwars9-1 {
+    background-image: url("../img/Starwars9-1.jpg");
+    background-size: 100% 100%;
+    height: 800px;
+    background-color: #FFFFFF;
+}
+
+#Starwars10-1 {
+    background-image: url("../img/Starwars10-1.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+    background-color: #FFFFFF;
+}
+
+#Starwars10-2 {
+    background-image: url("../img/Starwars10-1.jpg");
+    background-size: 100% 100%;
+    height: 300px;
+    background-color: #FFFFFF;
+}
+
+#Starwars11 {
+    background-image: url("../img/Starwars11.png");
+    background-size: 50% 100%;
+    height: 35px;
+    background-repeat: no-repeat;
+    margin-left: 30%;
+}
+
+#Starwars11-1 {
+    background-image: url("../img/Starwars11-1.jpg");
+    background-size: 100% 100%;
+    height: 700px;
+}
+
+#Starwars11-2 {
+    background-image: url("../img/Starwars11-1.jpg");
+    background-size: 100% 100%;
+    height: 300px;
+}
+
+#Starwars12 {
+    background-image: url("../img/Starwars12.png");
+    background-size: 50% 100%;
+    height: 35px;
+    background-repeat: no-repeat;
+    margin-left: 30%;
+}
+
+#Starwars12-1 {
+    background-image: url("../img/Starwars12-1.jpg");
+    background-size: 100% 100%;
+    height: 600px;
+}
+
+#Starwars12-2 {
+    background-image: url("../img/Starwars12-1.jpg");
+    background-size: 100% 100%;
+    height: 300px;
+}
+
+#Starwars13 {
+    background-image: url("../img/Starwars13.png");
+    background-size: 50% 100%;
+    height: 35px;
+    background-repeat: no-repeat;
+    margin-left: 30%;
+}
+
+#Starwars13-1 {
+    background-image: url("../img/Starwars13-1.jpg");
+    background-size: 100% 100%;
+    height: 600px;
+}
+
+#Starwars13-2 {
+    background-image: url("../img/Starwars13-1.jpg");
+    background-size: 100% 100%;
+    height: 300px;
+}
+
+#Spicegirls {
+    background-image: url("../img/Spicegirls.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+}
+
+#Spicegirls1 {
+    background-image: url("../img/Spicegirls1.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+    background-color: #FFFFFF;
+}
+
+#Lego2 {
+    background-image: url("../img/Lego2.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+}
+
+#History {
+    background-image: url("../img/history.jpg");
+    background-size: 100% 100%;
+    height: 2000px;
+}
+
+#About {
+    background-image: url("../img/About\ us.jpg");
+    background-size: 100% 100%;
+    height: 500px;
+}
+
+table {
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+th {
+    padding: 20px;
+    width: 20%;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #00ccff;
+}
+
+tr:nth-of-type(even) {
+    background-color: #00ccff;
+}
+
+td {
+    background-color: #00ccff;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+main a {
+    color: rgb(22, 9, 202);
+}
+
+audio {
+    width: 4.99em;
+}
+
+main h4 {
+    text-align: left;
+    font-size: large
+}
+
+main p a {
+    color: #FFFFFF;
+}
+
+main p b {
+    color: #FFFF00;
+}
+
+main h4 {
+    font-size: 2em;
+}
+
+main a b {
+    color: #FFFF00;
+}
