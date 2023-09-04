@@ -73,6 +73,7 @@ main #submit:hover {
     background-color: rgb(72, 88, 111);
 }
 
+
 main #submit:active {
     opacity: 0.8;
 }
