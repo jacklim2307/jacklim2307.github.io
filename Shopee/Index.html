@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <div class="background-image"></div>
     <header>
         <div class="header">
             <div class="header1">
@@ -21,14 +20,7 @@
         </div>
         <div class="log0">
             <div class="tcart1">
-                <a href="cart.html" class="tcart">&#128722;Cart <span id="total-quantity">0</span></a>
-            </div>
-            <div class="audioimage">
-                <img src="image/music.png" alt="Play" onclick="play()" width="25px">
-                <audio id="audio" autoplay loop>
-                 <source src="audio/song.mp3" type="audio/mpeg">
-                 Your browser does not support the audio element.
-             </audio>
+                <a href="cart.html" class="tcart">&#128722;Cart </a>
             </div>
             <div class="log1" style="margin-left: 65%;">
                 <div class="log">
@@ -47,109 +39,72 @@
             </div>
         </div>
 
-        <div class="himage">
-            <a href="Index.html"><img src="image/KH BANNER.png" style="width: 100%;"></image>
-            </a>
-        </div>
     </header>
-    <nav class="sticky">
-        <ul>
-            <li>
-                <a href="Index.html">HOME</a>&nbsp;
-            </li>
-            <li><a href="Brands.html">BRANDS</a>&nbsp;</li>
-            <li>
-                <a href="Category.html">CATEGORY</a>&nbsp;
-            </li>
-            <li><a href="ContactUs.html">CONTACT US</a>&nbsp;</li>
-            <li><a href="AboutUs.html">ABOUT US</a>&nbsp;</li>
-        </ul>
-    </nav>
+
     <main>
+        <h2>Promotion</h2>
+        <div class="slideshow-container">
 
-        <img src="image/home.jpeg" style="background-color: #c7c2c2; width: 100%">
+            <div class="mySlides fade">
+                <img src="image/slide1.jpg" style="background-color: #c7c2c2; width: 100%">
+            </div>
 
-        <h2>FEATURED PRODUCTS</h2>
-        <div class="product">
-            <div class="productslide">
-                <a href="Buncho1.html"><img src="image/Buncho1.jpg" alt="image1"></a>
-                <a href="Canon1.html"><img src="image/Canon1.png" alt="image2"></a>
-                <a href="Dingli1.html"><img src="image/Dingli1.jpg" alt="image3"></a>
-                <a href="Etona1.html"> <img src="image/Etona1.jpg" alt="image4"></a>
-                <a href="HuaJie1.html"><img src="image/HuaJie1.jpg" alt="image5"></a>
-                <a href="Lamy1.html"><img src="image/Lamy1.jpg" alt="image6"></a>
-                <a href="Power1.html"><img src="image/Power1.jpg" alt="image7"></a>
-                <a href="Shuter1.html"><img src="image/Shuter1.jpg" alt="image8"></a>
-                <a href="Buncho2.html"> <img src="image/Buncho2.jpg" alt="image9"></a>
-                <a href="Canon2.html"> <img src="image/Canon2.png" alt="image10"></a>
-                <a href="Dingli2.html"> <img src="image/Dingli2.png" alt="image11"></a>
-                <a href="Etona2.html"> <img src="image/Etona2.jpg" alt="image12"></a>
-                <a href="HuaJie2.html"> <img src="image/HuaJie2.jpg" alt="image13"></a>
-                <a href="Lamy2.html"> <img src="image/Lamy2.jpg" alt="image14"></a>
-                <a href="Power2.html"> <img src="image/Power2.jpg" alt="image15"></a>
-                <a href="Shuter2.html"> <img src="image/Shuter2.jpg" alt="image16"></a>
-                <a href="Buncho1.html"> <img src="image/Buncho1.jpg" alt="image1"></a>
-                <a href="Canon1.html"> <img src="image/Canon1.png" alt="image2"></a>
-                <a href="Dingli1.html"> <img src="image/Dingli1.jpg" alt="image3"></a>
-                <a href="Etona1.html"> <img src="image/Etona1.jpg" alt="image4"></a>
-                <a href="HuaJie1.html"> <img src="image/HuaJie1.jpg" alt="image5"></a>
-                <a href="Lamy1.html"> <img src="image/Lamy1.jpg" alt="image6"></a>
+            <div class=" mySlides fade ">
+                <img src="image/slide2.jpg " style="width:100% ">
+            </div>
+
+            <div class=" mySlides fade ">
+                <img src="image/slide3.jpg " style="width:100% ">
+            </div>
+            <a class="prev " onclick="plusSlides(-1) ">❮</a>
+            <a class="next " onclick="plusSlides(1) ">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center ">
+            <span class="dot " onclick="currentSlide(1) "></span>
+            <span class="dot " onclick="currentSlide(2) "></span>
+            <span class="dot " onclick="currentSlide(3) "></span>
+        </div>
+
+        <h2>Categories</h2>
+        <div class="cat">
+            <div class="image">
+                <div class="image1">
+                    <a href="Buncho1.html"><img src="image/Fashion.png "><br>Fashion
+                    </a>
+                </div>
+                <div class="image2">
+                    <a href="Buncho2.html"><img src="image/Home Appliances.png "><br>Home Appliances
+                    </a>
+                </div>
+                <div class="image3">
+                    <a href="Buncho3.html"><img src="image/Mobile & Gadget.png "><br>Mobile& Gadget
+                    </a>
+                </div>
+                <div class="image4">
+                    <a href="Buncho4.html"><img src="image/Watch.png "><br>Watch
+                    </a>
+                </div>
             </div>
         </div>
-        <div id="videoclip">
-            <div class="video">
-                <h3>Video Clips from Brands</h3>
-                <p>Video Clip of All LAMY&reg; Pens</p>
-                <iframe id="video1" width="853" height="480" src="https://www.youtube.com/embed/yKucFfK2ies" title="ALL LAMY PENS EXPLAINED!" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h2>Featured</h2>
+        <div class="fea">
+            <div class="fea1">
 
-                <p>Tips of Drawing using Buncho&reg;</p>
-                <iframe id="video2" width="853" height="480" src="https://www.youtube.com/embed/O-NSt1j2yJg" title="Lukisan Oil Pastel paling mudah! Waktu Senja | Pendidikan Seni Visual Pendidikan Khas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+            </div>
+            <div class="fea2">
 
-                <p>The Reason You Should Buy CANON&reg; F-789SGA</p>
-                <iframe id="video3" width="853" height="480" src="https://www.youtube.com/embed/Il6hRsAZwJc" title="Canon F-789SGA: Should You Buy It?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
             </div>
         </div>
     </main>
-    <footer>
-        <div class="footer ">
-            <nav>
-                <div class="footer1 ">
-                    <ul>
-                        <h3 class="tfooter ">information</h3>
-                        <li><a href="AboutUs.html ">About Us</a></li>
-                        <li><a href="Brands.html "> Brands</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer2 ">
-                    <ul>
-                        <h3 class="tfooter ">Customer services</h3>
-                        <li><a href="FAQ.html ">FAQ</a></li>
-                        <li><a href="Return&RefundPolicy.html ">Return & Refund Policy</a></li>
-                        <li><a href="ContactUS.html ">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer3 ">
-                    <ul>
-                        <h3 class="tfooter ">My Account</h3>
-
-                        <li><a href="MyAccount.html ">My Account</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <p>We Accept:</p>
-            <img src="image/Payment.png ">
-        </div>
-        <div class=" end ">
-            <div class="end1 ">
-                <div class="copyright ">Copyright © 2023 Kwang Hwa Mart Sdn Bhd. All rights reserved.</div>
-            </div>
-    </footer>
     <script>
         const userKey = "user";
+
+        if (!localStorage.getItem(userKey)) {
+            window.location.href = "Login.html";
+        }
 
         function logout() {
             localStorage.removeItem(userKey);
@@ -182,23 +137,46 @@
 
         cartIcon.innerHTML = `&#128722;Cart <span id="total-quantity">${totalQuantity}</span>`;
 
-        const slide = document.querySelector(".productslide");
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-        slide.addEventListener("mouseover", () => {
-            slide.style.animationPlayState = "paused";
-        });
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
 
-        slide.addEventListener("mouseout", () => {
-            slide.style.animationPlayState = "running";
-        });
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
 
-        function play() {
-            var audio = document.getElementById("audio");
-            if (audio.paused && audio.currentTime > 0) {
-                audio.play();
-            } else {
-                audio.pause();
+        let slideTimer = setInterval(function() {
+            plusSlides(1)
+        }, 5000);
+
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].addEventListener("click", function() {
+                clearInterval(slideTimer);
+            });
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
             }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
         }
     </script>
 </body>
