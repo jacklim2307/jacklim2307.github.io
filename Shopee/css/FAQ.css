@@ -1,0 +1,14 @@
+main div#faq {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: cursive, 'Trebuchet MS', sans-serif;
+}
+
+ol li {
+    font-size: 20px;
+}
+
+main p {
+    font-size: 20px;
+    line-height: 1.5;
+}

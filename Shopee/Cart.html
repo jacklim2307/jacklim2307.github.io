@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cart</title>
+    <link rel="icon" type="image/x-icon" href="image/KH LOGO.png">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/Cart.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <header>
+        <div class="header">
+            <div class="header1">
+                <div class="slideword">
+                    <p>ENJOY FREE DELIVERY ON OUR PRODUCTS</p>
+                </div>
+            </div>
+        </div>
+        <div class="log0">
+            <div class="tcart1">
+                <a href="cart.html" class="tcart">&#128722;Cart <span id="total-quantity">0</span></a>
+            </div>
+            <div class="log1">
+                <div class="log">
+                    &#128100;
+                    <div class="log-content">
+                        <a href="Login.html" id="LogIn">Log In</a>
+                    </div>
+                </div>
+                <div class="log2">
+                    &#128100;
+                    <div class="log2-content">
+                        <a href="MyAccount.html" id="MyAccount">Account</a>
+                        <a href="#" onclick="logout()" id="LogOut">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="himage">
+            <a href="Index.html"><img src="image/KH BANNER.png" style="width: 100%;"></image>
+            </a>
+        </div>
+    </header>
+    <nav class="sticky">
+        <ul>
+            <li>
+                <a href="Index.html">HOME</a>&nbsp;
+            </li>
+            <li><a href="Brands.html">BRANDS</a>&nbsp;</li>
+            <li>
+                <a href="Category.html">CATEGORY</a>&nbsp;
+            </li>
+            <li><a href="ContactUs.html">CONTACT US</a>&nbsp;</li>
+            <li><a href="AboutUs.html">ABOUT US</a>&nbsp;</li>
+
+        </ul>
+    </nav>
+    <main>
+        <div class="cart">
+            <h1>Cart</h1>
+            <div class="cartinfo">
+                <div id="cart"> </div>
+                <div class="down">
+                    <button type="submit" class="clear" onclick="clearCart()">Clear</button>
+                    <button class="pay" onclick="Payment()">Payment</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer ">
+            <nav>
+                <div class="footer1 ">
+                    <ul>
+                        <h3 class="tfooter ">information</h3>
+                        <li><a href="AboutUs.html ">About Us</a></li>
+                        <li><a href="Brands.html "> Brands</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer2 ">
+                    <ul>
+                        <h3 class="tfooter ">Customer services</h3>
+                        <li><a href="FAQ.html ">FAQ</a></li>
+                        <li><a href="Return&RefundPolicy.html ">Return & Refund Policy</a></li>
+                        <li><a href="ContactUS.html ">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer3 ">
+                    <ul>
+                        <h3 class="tfooter ">My Account</h3>
+
+                        <li><a href="MyAccount.html ">My Account</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <p>We Accept:</p>
+            <img src="image/Payment.png ">
+        </div>
+        <div class=" end ">
+            <div class="end1 ">
+                <div class="copyright ">Copyright © 2023 Kwang Hwa Mart Sdn Bhd. All rights reserved.</div>
+            </div>
+    </footer>
+    <script>
+        const userKey = "user";
+
+        function logout() {
+            localStorage.removeItem(userKey);
+            location.reload();
+        }
+
+        if (!localStorage.getItem(userKey)) {
+            showLogIn();
+        } else {
+            showLogOut();
+        }
+
+        function showLogOut() {
+            document.querySelector(".log ").style.display = "none ";
+            document.querySelector(".log2 ").style.display = "block ";
+        }
+
+        function showLogIn() {
+            document.querySelector(".log ").style.display = "block ";
+            document.querySelector(".log2 ").style.display = "none ";
+        }
+
+        const cart = document.getElementById("cart");
+        const productsInCart = JSON.parse(localStorage.getItem("productsInCart"));
+
+        if (productsInCart && productsInCart.length > 0) {
+            let totalPrice = 0;
+
+            productsInCart.forEach(function(item) {
+                const product = document.createElement("div");
+                product.innerHTML = `<div class="cart1">
+            <button id="deletebutton" onclick="deleteItem('${item.productName}')">X</button>
+             <div class="cimage"><${item.productImage}></div>
+              <div>Product Name: ${item.productName}</div>
+               <div>Price: ${item.price}</div>
+              <div>Quantity: 
+               <button onclick="decreaseQuantity('${item.productName}')">-</button>
+               <span id="${item.productName}-quantity">${item.quantity}</span>
+                <button onclick="increaseQuantity('${item.productName}')">+</button></br>
+                
+              </div>
+             </div>`;
+                const itemPrice = parseFloat(item.price.replace(/[^0-9.-]+/g, ""));
+                totalPrice += itemPrice * item.quantity;
+
+                cart.appendChild(product);
+            });
+
+            const totalPriceElement = document.createElement("div");
+            totalPriceElement.innerHTML = `<div class="tprice">Total Price: RM${totalPrice.toFixed(2)}</div>`;
+            cart.appendChild(totalPriceElement);
+        } else {
+            cart.innerHTML = "No items in cart.";
+        }
+
+        function decreaseQuantity(productName) {
+            const quantityElement = document.getElementById(`${productName}-quantity`);
+            let quantity = parseInt(quantityElement.innerHTML) || 0;
+            if (quantity > 1) {
+                quantity--;
+                quantityElement.innerHTML = quantity;
+                updateQuantity(productName, quantity);
+            }
+        }
+
+        function increaseQuantity(productName) {
+            const quantityElement = document.getElementById(`${productName}-quantity`);
+            let quantity = parseInt(quantityElement.innerHTML) || 0;
+            quantity++;
+            quantityElement.innerHTML = quantity;
+            updateQuantity(productName, quantity);
+
+        }
+
+        function updateQuantity(productName, quantity) {
+            let productsInCart = JSON.parse(window.localStorage.getItem("productsInCart")) || [];
+            let existingProductIndex = productsInCart.findIndex(p => p.productName === productName);
+
+            if (existingProductIndex !== -1) {
+                productsInCart[existingProductIndex].quantity = parseInt(quantity);
+            }
+
+            window.localStorage.setItem("productsInCart", JSON.stringify(productsInCart));
+            location.reload();
+            updateCartDisplay();
+        }
+
+        function deleteItem(productName) {
+            const index = productsInCart.findIndex(item => item.productName === productName);
+            if (index !== -1) {
+                productsInCart.splice(index, 1);
+                localStorage.setItem("productsInCart", JSON.stringify(productsInCart));
+                location.reload();
+                displayCart();
+            }
+        }
+
+        function clearCart() {
+            localStorage.removeItem("productsInCart");
+            location.reload();
+        }
+
+        const cartIcon = document.querySelector('.tcart');
+
+        let totalQuantity = 0;
+        productsInCart.forEach(function(item) {
+            totalQuantity += item.quantity;
+        });
+
+        cartIcon.innerHTML = `&#128722;Cart <span id="total-quantity">${totalQuantity}</span>`;
+
+        function Payment() {
+            const productsInCart = JSON.parse(localStorage.getItem("productsInCart"));
+            if (!productsInCart || productsInCart.length === 0) {
+                alert("Your cart is empty. Please add items to continue.");
+                return;
+            }
+            window.location.href = "Payment.html";
+        }
+    </script>
+</body>
+
+</html>

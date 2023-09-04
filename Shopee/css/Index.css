@@ -1,0 +1,73 @@
+main {
+    min-height: 400px;
+    height: 850px;
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+div.product {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+div.productslide {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slide 19s linear infinite;
+}
+
+div.productslide a {
+    width: 200px;
+    margin: 20px;
+}
+
+div.productslide a img {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    box-shadow: 0px 0px 6px 1px gray;
+    transform: scale(1, 1);
+    transition: 0.3s;
+}
+
+div.productslide a img:hover {
+    transform: scale(1.1);
+}
+
+div.productslide:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-72.7%);
+    }
+}
+
+div#videoclip {
+    padding-bottom: 30px;
+    display: block;
+    background-color: white;
+    float: left;
+    width: 100%;
+}
+
+.video {
+    width: 853px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a.tcart {
+    margin-right: 26px;
+}

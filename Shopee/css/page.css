@@ -1,0 +1,304 @@
+header {
+    background-color: white;
+}
+
+header h4 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+header div.header {
+    background-color: rgb(249, 198, 143);
+    height: 40px;
+    padding-top: 1px;
+}
+
+header div.header1 {
+    width: 100%;
+    height: 30px;
+    border-top: 2px white dashed;
+    border-bottom: 2px white dashed;
+    margin-top: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+div.slideword {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: tit 9s linear infinite;
+}
+
+div.slideword p {
+    margin: 5px 10px 5px 10px;
+    font-weight: bold;
+    color: rgb(80, 80, 80);
+}
+
+@keyframes tit {
+    0% {
+        transform: translateX(265%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+header div.himage {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header a img {
+    border-radius: 10px;
+}
+
+header a {
+    width: 350px;
+    display: block;
+    margin: 0px auto 0px auto;
+    padding: 5px 5px 2px 5px;
+}
+
+.log0 {
+    display: flex;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.log1 {
+    width: 20%;
+    margin-left: 70%;
+}
+
+.tcart1 {
+    margin-left: 5%;
+}
+
+a.tcart {
+    width: 128px;
+}
+
+#total-quantity {
+    border: 1px solid black;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+.tcart1 a {
+    text-decoration: none;
+}
+
+.tcart1 a:link,
+.tcart1 a:visited,
+.tcart1 a:active {
+    color: black;
+}
+
+.log,
+.log2 {
+    width: 70px;
+    text-align: right;
+}
+
+.tcart {
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+.log-content,
+.log2-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+}
+
+.log-content a,
+.log2-content a {
+    color: black;
+    text-decoration: none;
+    width: 80px;
+}
+
+.log:hover .log-content,
+.log2:hover .log2-content {
+    display: block;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0px;
+    max-width: 1024px;
+    min-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-image: url("../image/back1.jpg");
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    /*https://stackoverflow.com/questions/20039765/how-to-apply-a-css-filter-to-a-background-image*/
+}
+
+main {
+    background-color: white;
+    padding-top: 1px;
+    padding-bottom: 10px;
+}
+
+nav.sticky {
+    position: sticky;
+    top: 0;
+    padding: 1px 1px;
+    background-color: white;
+    z-index: 1;
+}
+
+nav.sticky ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 7px 7px;
+}
+
+nav.sticky li {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav.sticky a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Fantasy, sans-serif;
+    letter-spacing: 1px;
+    transform: scale(1, 1);
+    transition: all 0.2s ease-in-out;
+}
+
+nav.sticky ul li a:hover {
+    font-size: 25px;
+    transform: scale(2, 2);
+}
+
+nav.sticky ul li a:link,
+nav.sticky ul li a:visited,
+nav.sticky ul li a:active {
+    color: orangered;
+}
+
+footer {
+    background-color: peachpuff;
+    width: 100%;
+    color: black;
+    padding-top: 10px;
+}
+
+footer nav {
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    height: 130px;
+    padding-top: 0px;
+    margin-left: 5px;
+    width: 100%;
+}
+
+footer nav ul {
+    list-style: none;
+    list-style-image: none;
+    padding-left: 0;
+}
+
+footer nav ul li {
+    padding-top: 4px;
+}
+
+footer nav h3.tfooter {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer nav a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    transition: all 0.1s linear;
+}
+
+footer nav a:hover {
+    background-color: rgb(243, 184, 96);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+footer nav a:visited {
+    color: black;
+}
+
+footer nav a:active {
+    color: rgb(172, 118, 32);
+}
+
+footer nav div.footer1,
+footer nav div.footer2 {
+    width: 33%;
+    margin-left: 20px;
+}
+
+footer nav div.footer3 {
+    width: 33%;
+    margin-left: 40px;
+}
+
+footer div.footer {
+    width: 100%;
+}
+
+footer div.footer p {
+    margin: 30px 0px 0px 50px;
+    font-size: 1.1em;
+}
+
+footer div.footer img {
+    padding-bottom: 20px;
+    width: 200px;
+    margin-left: 50px;
+}
+
+footer div.end {
+    width: 100%;
+    background-color: grey;
+    height: 30px;
+    padding-top: 10px;
+    color: white;
+}
+
+footer div.end1 {
+    width: 98%;
+    margin-left: 1%;
+}
+
+.player {
+    width: 10px;
+    height: 10px;
+}

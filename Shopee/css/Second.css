@@ -1,0 +1,12 @@
+main nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+main nav a {
+    text-decoration: none;
+}
