@@ -97,7 +97,7 @@ main #submit:active {
     border: 2px solid red;
 }
 
-html {
+body {
     background-color: #EE4D2D;
     length: 1000px;
 }
