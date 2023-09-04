@@ -1,5 +1,5 @@
 header {
-    background-color: white;
+    background-color: #EE4D2D;
 }
 
 header h4 {
@@ -67,7 +67,7 @@ header a {
 
 .log0 {
     display: flex;
-    font-size: 20px;
+    font-size: 25px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -86,7 +86,7 @@ a.tcart {
 }
 
 #total-quantity {
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 2px 5px;
     border-radius: 50%;
 }
@@ -96,9 +96,12 @@ a.tcart {
 }
 
 .tcart1 a:link,
-.tcart1 a:visited,
+.tcart1 a:visited {
+    color: white;
+}
+
 .tcart1 a:active {
-    color: black;
+    opacity: 0.8;
 }
 
 .log,
@@ -123,7 +126,7 @@ a.tcart {
 
 .log-content a,
 .log2-content a {
-    color: black;
+    color: white;
     text-decoration: none;
     width: 80px;
 }
@@ -137,72 +140,15 @@ body {
     font-family: Verdana, sans-serif;
     margin: 0px;
     max-width: 1024px;
-    min-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.background-image {
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    display: block;
-    background-image: url("../image/back1.jpg");
-    width: 100%;
     height: 100%;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-    /*https://stackoverflow.com/questions/20039765/how-to-apply-a-css-filter-to-a-background-image*/
 }
 
 main {
     background-color: white;
     padding-top: 1px;
     padding-bottom: 10px;
-}
-
-nav.sticky {
-    position: sticky;
-    top: 0;
-    padding: 1px 1px;
-    background-color: white;
-    z-index: 1;
-}
-
-nav.sticky ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 7px 7px;
-}
-
-nav.sticky li {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-nav.sticky a {
-    text-decoration: none;
-    font-size: 20px;
-    font-family: Fantasy, sans-serif;
-    letter-spacing: 1px;
-    transform: scale(1, 1);
-    transition: all 0.2s ease-in-out;
-}
-
-nav.sticky ul li a:hover {
-    font-size: 25px;
-    transform: scale(2, 2);
-}
-
-nav.sticky ul li a:link,
-nav.sticky ul li a:visited,
-nav.sticky ul li a:active {
-    color: orangered;
 }
 
 footer {
