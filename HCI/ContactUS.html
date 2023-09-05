@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="image/KH LOGO.png">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/Second.css" rel="stylesheet">
+    <link href="css/ContactUs.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <header>
+        <div class="header">
+            <div class="header1">
+                <div class="slideword">
+                    <p>ENJOY FREE DELIVERY ON OUR PRODUCTS</p>
+                </div>
+            </div>
+        </div>
+        <div class="log0">
+            <div class="tcart1">
+                <a href="cart.html" class="tcart">&#128722;Cart <span id="total-quantity">0</span></a>
+            </div>
+            <div class="log1">
+                <div class="log">
+                    &#128100;
+                    <div class="log-content">
+                        <a href="Login.html" id="LogIn">Log In</a>
+                    </div>
+                </div>
+                <div class="log2">
+                    &#128100;
+                    <div class="log2-content">
+                        <a href="MyAccount.html" id="MyAccount">Account</a>
+                        <a href="#" onclick="logout()" id="LogOut">Log Out</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="himage">
+            <a href="Index.html"><img src="image/KH BANNER.png" style="width: 100%;"></image>
+            </a>
+        </div>
+    </header>
+    <nav class="sticky">
+        <ul>
+            <li>
+                <a href="Index.html">HOME</a>&nbsp;
+            </li>
+            <li><a href="Brands.html">BRANDS</a>&nbsp;</li>
+            <li>
+                <a href="Category.html">CATEGORY</a>&nbsp;
+            </li>
+            <li><a href="ContactUs.html">CONTACT US</a>&nbsp;</li>
+            <li><a href="AboutUs.html">ABOUT US</a>&nbsp;</li>
+
+        </ul>
+    </nav>
+
+    <main>
+        <nav class="Second">
+            <ul>
+                <li><a href="Index.html" style="color: rgb(128, 124, 124);">Home</a>
+                </li> &nbsp;>&nbsp;
+                <li><a href="ContactUS.html" style="font-weight: bold; color: rgba(120, 120, 120, 1)">ContactUS</a></li>
+            </ul>
+        </nav>
+        <div id="contact">
+            <h1>Contact Us</h1>
+            <p><strong>Opening hours:</strong></p>
+            <p>8.30am to 5.30pm (Monday – Friday, except for public holidays)
+            </p>
+
+            <iframe width="770" height="510" src="https://maps.google.com/maps?q=tarumt&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+            </iframe>
+            <div class="detail">
+                <p>Company details</p>
+                <li class="first">
+                    Kwang Hwa Sdn Bhd Company Reg. Jalan Genting Kelang, Setapak, 53300 Kuala Lumpur, P.O. Box 10979, 50932 Kuala Lumpur, Malaysia.
+                </li>
+                <li class="second">
+                    +6(03) 4145 0100/ 4145 0123 (Ext 3655/3108/3654/3308)
+                </li>
+            </div>
+            <form onsubmit="return Send(event)" id="myForm">
+                <fieldset>
+                    <h2>Feedback</h2>
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name"></br>
+                    <label for="email">Email Address</label></br>
+                    <input type="text" id="email"></br>
+                    <label for="message">Message</label></br>
+                    <textarea id="message" name="Message" rows="4"></textarea>
+                    </br>
+                    <input type="submit" id="submit" value="Send">
+                </fieldset>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer ">
+            <nav>
+                <div class="footer1 ">
+                    <ul>
+                        <h3 class="tfooter ">information</h3>
+                        <li><a href="AboutUs.html ">About Us</a></li>
+                        <li><a href="Brands.html "> Brands</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer2 ">
+                    <ul>
+                        <h3 class="tfooter ">Customer services</h3>
+                        <li><a href="FAQ.html ">FAQ</a></li>
+                        <li><a href="Return&RefundPolicy.html ">Return & Refund Policy</a></li>
+                        <li><a href="ContactUS.html ">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer3 ">
+                    <ul>
+                        <h3 class="tfooter ">My Account</h3>
+
+                        <li><a href="MyAccount.html ">My Account</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <p>We Accept:</p>
+            <img src="image/Payment.png ">
+        </div>
+        <div class=" end ">
+            <div class="end1 ">
+                <div class="copyright ">Copyright © 2023 Kwang Hwa Mart Sdn Bhd. All rights reserved.</div>
+            </div>
+    </footer>
+    <script>
+        const userKey = "user";
+
+        function logout() {
+            localStorage.removeItem(userKey);
+            location.reload();
+        }
+
+        if (!localStorage.getItem(userKey)) {
+            showLogIn();
+        } else {
+            showLogOut();
+        }
+
+        function showLogOut() {
+            document.querySelector(".log").style.display = "none";
+            document.querySelector(".log2").style.display = "block";
+        }
+
+        function showLogIn() {
+            document.querySelector(".log").style.display = "block";
+            document.querySelector(".log2").style.display = "none";
+        }
+
+        function Send(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            if (!name) {
+                alert("Please enter a username.");
+                return false;
+            }
+
+            if (!email) {
+                alert("Please enter an email.");
+                return false;
+            }
+
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail.com$/;
+
+            if (!emailRegex.test(email)) {
+                alert("Invalid email format.");
+                return false;
+            }
+
+            if (!message) {
+                alert("Message field can not be blank.");
+                return false;
+            }
+
+            const feedback = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            window.localStorage.setItem("feedback", JSON.stringify(feedback));
+            alert("Successful");
+            document.getElementById("myForm").reset();
+        }
+
+        const cartIcon = document.querySelector('.tcart');
+        const productsInCart = JSON.parse(localStorage.getItem("productsInCart"));
+
+        let totalQuantity = 0;
+        productsInCart.forEach(function(item) {
+            totalQuantity += item.quantity;
+        });
+
+        cartIcon.innerHTML = `&#128722;Cart <span id="total-quantity">${totalQuantity}</span>`;
+    </script>
+</body>
+
+</html>

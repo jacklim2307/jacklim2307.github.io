@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KWANG HWA</title>
+    <link rel="icon" type="image/x-icon" href="image/KH LOGO.png">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/Index.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="log0">
+            <div class="tcart1">
+                <a href="cart.html" class="tcart">&#128722;Cart</a>
+            </div>
+
+            <div class="log1" style="margin-left: 50%;">
+                <div class="log">
+                    &#128100;
+                    <div class="log-content">
+                        <a href="Login.html" id="LogIn">Log In</a>
+                    </div>
+                </div>
+                <div class="log2">
+                    &#128100;
+                    <div class="log2-content">
+                        <a href="MyAccount.html" id="MyAccount">Account</a>
+                        <a href="#" onclick="logout()" id="LogOut">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <h2>Promotion</h2>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="image/slide1.jpg" style="background-color: #c7c2c2; width: 100%">
+            </div>
+
+            <div class=" mySlides fade ">
+                <img src="image/slide2.jpg " style="width:100% ">
+            </div>
+
+            <div class=" mySlides fade ">
+                <img src="image/slide3.jpg " style="width:100% ">
+            </div>
+            <a class="prev " onclick="plusSlides(-1) ">❮</a>
+            <a class="next " onclick="plusSlides(1) ">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center ">
+            <span class="dot " onclick="currentSlide(1) "></span>
+            <span class="dot " onclick="currentSlide(2) "></span>
+            <span class="dot " onclick="currentSlide(3) "></span>
+        </div>
+
+        <h2>Categories</h2>
+        <div class="cat">
+            <div class="image">
+                <div class="image1">
+                    <a href="Buncho1.html"><img src="image/Fashion.png "><br>Fashion
+                    </a>
+                </div>
+                <div class="image2">
+                    <a href="Buncho2.html"><img src="image/Home Appliances.png "><br>Home Appliances
+                    </a>
+                </div>
+                <div class="image3">
+                    <a href="Buncho3.html"><img src="image/Mobile & Gadget.png "><br>Mobile& Gadget
+                    </a>
+                </div>
+                <div class="image4">
+                    <a href="Buncho4.html"><img src="image/Watch.png "><br>Watch
+                    </a>
+                </div>
+            </div>
+        </div>
+        <h2>Featured</h2>
+        <div class="fea">
+            <div class="fea1">
+
+            </div>
+            <div class="fea2">
+
+            </div>
+        </div>
+    </main>
+    <script>
+        const userKey = "user";
+
+        if (!localStorage.getItem(userKey)) {
+            window.location.href = "Login.html";
+        }
+
+        function logout() {
+            localStorage.removeItem(userKey);
+            location.reload();
+        }
+
+        if (!localStorage.getItem(userKey)) {
+            showLogIn();
+        } else {
+            showLogOut();
+        }
+
+        function showLogOut() {
+            document.querySelector(".log").style.display = "none";
+            document.querySelector(".log2").style.display = "block";
+        }
+
+        function showLogIn() {
+            document.querySelector(".log").style.display = "block";
+            document.querySelector(".log2").style.display = "none";
+        }
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        let slideTimer = setInterval(function() {
+            plusSlides(1)
+        }, 5000);
+
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].addEventListener("click", function() {
+                clearInterval(slideTimer);
+            });
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>
