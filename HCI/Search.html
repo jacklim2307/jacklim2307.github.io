@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="image/KH LOGO.png">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/Second.css" rel="stylesheet">
+    <link href="css/AboutUs.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <header>
+        <div class="log0">
+            <div class="tcart1">
+                <a href="cart.html" class="tcart">&#128722;Cart</a>
+            </div>
+            <div class="log1">
+                <div class="log">
+                    &#128100;
+                    <div class="log-content">
+                        <a href="Login.html" id="LogIn">Log In</a>
+                    </div>
+                </div>
+                <div class="log2">
+                    &#128100;
+                    <div class="log2-content">
+                        <a href="MyAccount.html" id="MyAccount">Account</a>
+                        <a href="#" onclick="logout()" id="LogOut">Log Out</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <div class="wrapper">
+        <div id="search-container">
+            <input type="search" id="search-input" placeholder="Search product name here.." />
+            <button id="search">Search</button>
+        </div>
+        <div id="buttons">
+            <button class="button-value" onclick="filterProduct('all')">All</button>
+            <button class="button-value" onclick="filterProduct('Fashion')">
+            Fashion
+          </button>
+            <button class="button-value" onclick="filterProduct('Home Appliances')">
+            Home Appliances
+          </button>
+            <button class="button-value" onclick="filterProduct('Mobile& Gadget')">
+            Mobile& Gadget
+          </button>
+            <button class="button-value" onclick="filterProduct('Watch')">
+            Watch
+          </button>
+        </div>
+        <div id="products"></div>
+    </div>
+    <script>
+        const userKey = "user";
+
+        function logout() {
+            localStorage.removeItem(userKey);
+            location.reload();
+        }
+
+        if (!localStorage.getItem(userKey)) {
+            showLogIn();
+        } else {
+            showLogOut();
+        }
+
+        function showLogOut() {
+            document.querySelector(".log").style.display = "none";
+            document.querySelector(".log2").style.display = "block";
+        }
+
+        function showLogIn() {
+            document.querySelector(".log").style.display = "block";
+            document.querySelector(".log2").style.display = "none";
+        }
+    </script>
+    <script src="product.js"></script>
+</body>
+
+</html>

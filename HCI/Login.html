@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="image/KH LOGO.png">
+    <link href="css/page.css" rel="stylesheet">
+    <link href="css/Login.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="log0">
+            <div class="tcart1">
+                <a href="cart.html" class="tcart">&#128722;Cart </a>
+            </div>
+        </div>
+        <div class="himage">
+            <a href="Index.html"><img src="image/.png" style="width: 100%;"></image>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="login">
+            <h1>Login</h1>
+
+            <label for="username">Username / Email</label></br>
+            <input type="text" id="username" name="username" placeholder="Enter Username / Email">
+            </br>
+            </br>
+            </br>
+            </br>
+
+            <label for="password">Password</label></br>
+            <input type="password" id="password" name="password" placeholder="Enter Password">
+            </br>
+            </br>
+            </br>
+            </br>
+
+            <button type="submit" id="submit" onclick="Login()">Login</button>
+            <div class="title">
+                No Account?
+                <a href="#" onclick="showRegisterForm() ">Register</a>
+            </div>
+        </div>
+
+
+        <div class="register " style="display: none; ">
+            <h1>Register</h1>
+
+            <label for="new-username">Username</label></br>
+            <input type="text" id="new-username" name="new-username" placeholder="Username">
+            </br>
+            </br>
+
+            <label for="new-email">Email</label></br>
+            <input type="email" id="new-email" name="new-email" placeholder="example@gmail.com"></br>
+            </br>
+
+            <label for="new-password">Password</label></br>
+            <input type="password" id="new-password" name="new-password" placeholder="At least 1 letter and 1 number, and be at least 8 characters long.">
+            </br>
+            </br>
+
+            <button type="submit" id="submit" onclick="Register()">Register</button>
+            <div class="title">
+                Already have an account?
+                <a href="#" onclick="showLoginForm() ">Login</a>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        const userKey = "user";
+
+        function logout() {
+            localStorage.removeItem(userKey);
+            location.reload();
+        }
+
+        if (!localStorage.getItem(userKey)) {
+            showLogIn();
+        } else {
+            showLogOut();
+        }
+
+        function showLogOut() {
+            document.querySelector(".log").style.display = "none";
+            document.querySelector(".log2").style.display = "block";
+        }
+
+        function showLogIn() {
+            document.querySelector(".log").style.display = "block";
+            document.querySelector(".log2").style.display = "none";
+        }
+
+        function showRegisterForm() {
+            var login = document.querySelector('.login');
+            var register = document.querySelector('.register');
+            login.style.display = 'none';
+            register.style.display = 'block';
+        }
+
+
+        function showLoginForm() {
+            var login = document.querySelector('.login');
+            var register = document.querySelector('.register');
+            login.style.display = 'block';
+            register.style.display = 'none';
+        }
+
+        function Login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const user = {
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value
+            };
+
+            if (!username) {
+                document.getElementById("username").classList.add("invalid");
+                setTimeout(function() {
+                    alert("Please enter a username.");
+                }, 100);
+                return;
+            } else {
+                document.getElementById("username").classList.remove("invalid");
+            }
+
+            if (!password) {
+                document.getElementById("password").classList.add("invalid");
+                setTimeout(function() {
+                    alert("Please enter a password.");
+                }, 100);
+                return;
+            } else {
+                document.getElementById("password").classList.remove("invalid");
+            }
+
+            if (localStorage.getItem(username) === password) {
+                document.getElementById("password").classList.add("invalid");
+                window.localStorage.setItem("user", JSON.stringify(user));
+                alert("Login successful.");
+                window.location.href = "Index.html";
+            } else {
+                document.getElementById("password").classList.add("invalid");
+                setTimeout(function() {
+                    alert("Incorrect username or password.");
+                }, 100);
+            }
+        }
+
+
+        function Register() {
+            const newUsername = document.getElementById("new-username").value;
+            const newEmail = document.getElementById("new-email").value;
+            const newPassword = document.getElementById("new-password").value;
+
+            if (!newUsername) {
+                document.getElementById("new-username").classList.add("invalid");
+                setTimeout(function() {
+                    alert("Please enter a username.");
+                }, 100);
+                return;
+            } else {
+                document.getElementById("new-username").classList.remove("invalid");
+            }
+
+            if (!newEmail) {
+                document.getElementById("new-email").classList.add("invalid");
+                setTimeout(function() {
+                    alert("Please enter an email.");
+                }, 100);
+                return;
+            } else {
+                document.getElementById("new-email").classList.remove("invalid");
+            }
+
+            if (!newPassword) {
+                document.getElementById("new-password").classList.add("invalid");
+                setTimeout(function() {
+                    alert("Please enter a password.");
+                }, 100);
+                return;
+            } else {
+                document.getElementById("new-password").classList.remove("invalid");
+            }
+
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+            if (!emailRegex.test(newEmail)) {
+                document.getElementById("new-email").classList.add("invalid");
+                setTimeout(function() {
+                    alert("Invalid email format.");
+                }, 100);
+                return;
+            } else {
+                document.getElementById("new-email").classList.remove("invalid");
+            }
+
+
+            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+            if (!passwordRegex.test(newPassword)) {
+                document.getElementById("new-password").classList.add("invalid");
+                setTimeout(function() {
+                    alert("Password must contain at least 1 letter and 1 number, and be at least 8 characters long.");
+                }, 100);
+                return;
+            } else {
+                document.getElementById("new-password").classList.remove("invalid");
+            }
+
+            if (localStorage.getItem(newUsername)) {
+                document.getElementById("new-username").classList.add("invalid");
+                setTimeout(function() {
+                    alert("Username already taken.");
+                }, 100);
+                return;
+            } else {
+                document.getElementById("new-username").classList.remove("invalid");
+            }
+
+            if (localStorage.getItem(newEmail)) {
+                document.getElementById("new-email").classList.add("invalid");
+                setTimeout(function() {
+                    alert("Email already taken.");
+                }, 100);
+                return;
+            } else {
+                document.getElementById("new-email").classList.remove("invalid");
+            }
+
+            localStorage.setItem(newUsername, newPassword);
+            localStorage.setItem(newEmail, newPassword); // Save email to local storage as well
+            alert("Registration successful!");
+
+            window.location.href = "Login.html";
+        }
+    </script>
+</body>
+
+</html>
