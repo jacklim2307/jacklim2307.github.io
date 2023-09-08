@@ -149,3 +149,7 @@ div.prooffer {
     font-size: 1.15em;
     margin-left: 10%;
 }
+
+div.search a {
+    width: 40px;
+}
