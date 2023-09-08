@@ -1,0 +1,112 @@
+main {
+    min-height: 389px;
+}
+
+main h1 {
+    margin-top: 0;
+}
+
+div.cart {
+    width: 100%;
+    font-size: 20px;
+}
+
+div.cart div.cart1 {
+    width: 98%;
+    height: 130px;
+    background-color: #DADADA;
+    border: 1px solid black;
+    /* border-bottom: none; */
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+div.cart div.cimage {
+    float: left;
+    width: auto;
+    margin-right: 5px;
+}
+
+div.cart img {
+    width: 110px;
+}
+
+div.tprice {
+    /* border-top: 5px solid rgb(255, 164, 79); */
+    width: 980px;
+    font-size: 25px;
+    padding: 20px;
+}
+
+div.down {
+    display: flex;
+}
+
+button.clear {
+    width: 512px;
+    height: 50px;
+    background-color: #EE4D2D;
+    border: none;
+    color: white;
+    box-shadow: 0px 0px 6px 0px gray;
+    margin-top: 10px;
+    transition: all 0.15s;
+    font-size: 1.3em;
+}
+
+button.clear:hover {
+    background-color: #EE4D2D;
+}
+
+button.clear:active {
+    opacity: 0.8;
+}
+
+button.pay {
+    width: 512px;
+    height: 50px;
+    background-color: #EE4D2D;
+    border: none;
+    border-left: 2px solid white;
+    color: white;
+    box-shadow: 0px 0px 6px 0px gray;
+    margin-top: 10px;
+    transition: all 0.15s;
+    font-size: 1.3em;
+}
+
+button.pay:hover {
+    background-color: rgb(72, 88, 111);
+}
+
+button.pay:active {
+    opacity: 0.8;
+}
+
+div.cart1 span {
+    /* border: 1px solid black; */
+    background-color: rgb(251, 173, 99);
+    padding: 2px 8px 2px 8px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+#deletebutton {
+    float: right;
+    background-color: rgb(248, 142, 35);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 5px 5px 6px;
+    cursor: pointer;
+}
+
+div.log1 {
+    margin-left: 70%;
+}
+
+div.log0 a:link,
+div.log0 a:active,
+div.log0 a:visited {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,37 @@
+main {
+    height: 500px;
+    width: 1024px;
+}
+
+div.account1 {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.account1 h1 {
+    text-align: center;
+    width: 100%;
+}
+
+main div.accountinfo {
+    display: flex;
+    font-size: 20px;
+}
+
+div.profile {
+    border: 1px solid;
+    border-color: rgb(170, 170, 170);
+    width: 60%;
+    height: 200px;
+    padding: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.profile td {
+    padding-top: 30px;
+    padding-right: 10px;
+    text-align: left;
+}
