@@ -175,6 +175,8 @@ document.getElementById("search").addEventListener("click", () => {
     let elements = document.querySelectorAll(".product-name");
     let cards = document.querySelectorAll(".card");
 
+    filterProduct("all");
+    
     //loop through all elements
     elements.forEach((element, index) => {
         //check if text includes the search value
